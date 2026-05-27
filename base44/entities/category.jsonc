@@ -1,0 +1,41 @@
+{
+  "name": "Category",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Reference to the Game"
+    },
+    "name": {
+      "type": "string",
+      "description": "Category name (e.g., Race Winner)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of the category"
+    },
+    "category_type": {
+      "type": "string",
+      "enum": ["single_driver", "multi_driver", "yes_no_count", "teammate_duel"],
+      "description": "Type of pick interface"
+    },
+    "multiplier": {
+      "type": "number",
+      "description": "Scoring multiplier (e.g., 2.0, 3.0)"
+    },
+    "has_partial_credit": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether partial credit is awarded"
+    },
+    "sort_order": {
+      "type": "integer",
+      "description": "Display order (1-6)"
+    },
+    "correct_answer": {
+      "type": "string",
+      "description": "Correct answer (filled post-race)"
+    }
+  },
+  "required": ["game_id", "name", "category_type", "multiplier", "sort_order"]
+}

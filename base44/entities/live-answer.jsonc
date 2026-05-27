@@ -1,0 +1,33 @@
+{
+  "name": "LiveAnswer",
+  "type": "object",
+  "properties": {
+    "player_id": {
+      "type": "string",
+      "description": "Reference to the Player"
+    },
+    "round_id": {
+      "type": "string",
+      "description": "Reference to the LiveRound"
+    },
+    "pick": {
+      "type": "string",
+      "description": "The player's answer"
+    },
+    "is_correct": {
+      "type": "boolean",
+      "description": "Whether the answer was correct"
+    },
+    "points_earned": {
+      "type": "number",
+      "default": 0,
+      "description": "Points earned (25 if correct)"
+    },
+    "was_late": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether submitted during grace period"
+    }
+  },
+  "required": ["player_id", "round_id", "pick"]
+}

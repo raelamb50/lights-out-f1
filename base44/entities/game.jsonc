@@ -1,0 +1,50 @@
+{
+  "name": "Game",
+  "type": "object",
+  "properties": {
+    "race_name": {
+      "type": "string",
+      "description": "Name of the race (e.g., Monaco Grand Prix)"
+    },
+    "room_code": {
+      "type": "string",
+      "description": "4-character room code for joining"
+    },
+    "phase": {
+      "type": "string",
+      "enum": ["lobby", "predictions", "locked", "live", "scoring", "final"],
+      "default": "lobby",
+      "description": "Current game phase"
+    },
+    "host_id": {
+      "type": "string",
+      "description": "User ID of the game host"
+    },
+    "host_name": {
+      "type": "string",
+      "description": "Display name of the host"
+    },
+    "race_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the race"
+    },
+    "state_of_play": {
+      "type": "string",
+      "description": "Pre-race briefing text (3 bullet points)"
+    },
+    "circuit_name": {
+      "type": "string",
+      "description": "Name of the circuit"
+    },
+    "circuit_laps": {
+      "type": "integer",
+      "description": "Number of laps"
+    },
+    "circuit_length_km": {
+      "type": "string",
+      "description": "Circuit length in km"
+    }
+  },
+  "required": ["race_name", "room_code", "phase", "host_id"]
+}

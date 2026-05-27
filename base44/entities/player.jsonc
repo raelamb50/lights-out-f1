@@ -1,0 +1,48 @@
+{
+  "name": "Player",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Reference to the Game"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "Base44 user ID (null for guests)"
+    },
+    "display_name": {
+      "type": "string",
+      "description": "Player display name"
+    },
+    "avatar_color": {
+      "type": "string",
+      "description": "Hex color for player avatar"
+    },
+    "is_host": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this player is the game host"
+    },
+    "has_submitted": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether predictions have been submitted"
+    },
+    "total_score": {
+      "type": "number",
+      "default": 0,
+      "description": "Total accumulated score"
+    },
+    "pre_race_score": {
+      "type": "number",
+      "default": 0,
+      "description": "Score from pre-race predictions"
+    },
+    "live_score": {
+      "type": "number",
+      "default": 0,
+      "description": "Score from live rounds"
+    }
+  },
+  "required": ["game_id", "display_name", "avatar_color"]
+}

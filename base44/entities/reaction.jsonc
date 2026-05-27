@@ -1,0 +1,19 @@
+{
+  "name": "Reaction",
+  "type": "object",
+  "properties": {
+    "player_id": {
+      "type": "string",
+      "description": "Reference to the Player"
+    },
+    "game_id": {
+      "type": "string",
+      "description": "Reference to the Game"
+    },
+    "emoji": {
+      "type": "string",
+      "description": "The emoji reaction"
+    }
+  },
+  "required": ["player_id", "game_id", "emoji"]
+}

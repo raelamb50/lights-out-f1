@@ -1,0 +1,23 @@
+{
+  "name": "ResultVote",
+  "type": "object",
+  "properties": {
+    "player_id": {
+      "type": "string",
+      "description": "Reference to the Player"
+    },
+    "game_id": {
+      "type": "string",
+      "description": "Reference to the Game"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Reference to the Category"
+    },
+    "voted_answer": {
+      "type": "string",
+      "description": "What this player says the answer was"
+    }
+  },
+  "required": ["player_id", "game_id", "category_id", "voted_answer"]
+}

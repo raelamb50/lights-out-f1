@@ -1,0 +1,38 @@
+{
+  "name": "LiveRound",
+  "type": "object",
+  "properties": {
+    "game_id": {
+      "type": "string",
+      "description": "Reference to the Game"
+    },
+    "question": {
+      "type": "string",
+      "description": "The live round question"
+    },
+    "options": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Multiple choice options"
+    },
+    "correct_answer": {
+      "type": "string",
+      "description": "The correct answer"
+    },
+    "time_limit_seconds": {
+      "type": "integer",
+      "default": 20,
+      "description": "Countdown timer in seconds"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this round is currently active"
+    },
+    "round_number": {
+      "type": "integer",
+      "description": "Round number (1-5)"
+    }
+  },
+  "required": ["game_id", "question", "options", "round_number"]
+}
